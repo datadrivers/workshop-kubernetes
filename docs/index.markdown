@@ -8,7 +8,7 @@ nav_order: 1
 
 ## Topics
 
-1.
+1. [Concepts](concepts.markdown) (approx. 60 min)
 14. [Best Practices](best-practices.markdown) (approx. 15 min)
 15. Questions (approx. 15 min)
 16. [What's next](next.markdown) (approx. end of life ;-D)
