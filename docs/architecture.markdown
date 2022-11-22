@@ -1,5 +1,5 @@
 ---
 title: Architecture
-permalink: /
+permalink: /architecture
 nav_order: 3
 ---
