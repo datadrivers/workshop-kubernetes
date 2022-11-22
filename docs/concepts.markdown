@@ -20,7 +20,7 @@ Before the course really gets going, there are a few important concepts to clari
 
 | Pet | Cattle |
 |--------|-----|
-| ![pet](pet.jpg) | ![cattle](cattle.jpg) |
+| ![pet](../static/pet.jpg) | ![cattle](../static/cattle.jpg) |
 | Has a name | Has a number |
 | Is unique or rare | One is much like any other |
 | Personal Attention | Run as a group |
