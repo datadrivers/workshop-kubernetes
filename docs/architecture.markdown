@@ -49,29 +49,29 @@ It provides a framework to run distributed systems resiliently
 - Service discovery and load balancing
 - Storage orchestration
 
-## Komponentes
+## Architecture
 
 ![achitecture](static/components-of-kubernetes.svg)
 
-### Control Plane
+## Control Plane
 
 The control plane's components make global decisions about the cluster (for example, scheduling), as well as detecting and responding to cluster events (for example, starting up a new pod when a deployment's replicas field is unsatisfied).
 
-#### kube-apiserver
+### kube-apiserver
 
 The API server is a component of the Kubernetes control plane that exposes the Kubernetes API. The API server is the front end for the Kubernetes control plane.
 
-#### etcd
+### etcd
 
 Consistent and highly-available key value store used as Kubernetes' backing store for all cluster data.
 
-#### kube-scheduler
+### kube-scheduler
 
 Control plane component that watches for newly created Pods with no assigned node, and selects a node for them to run on.
 
 Factors taken into account for scheduling decisions include: individual and collective resource requirements, hardware/software/policy constraints, affinity and anti-affinity specifications, data locality, inter-workload interference, and deadlines.
 
-#### kube-controller-manager
+### kube-controller-manager
 
 Control plane component that runs controller processes.
 
@@ -84,7 +84,7 @@ Some types of these controllers are:
 - EndpointSlice controller: Populates EndpointSlice objects (to provide a link between Services and Pods).
 - ServiceAccount controller: Create default ServiceAccounts for new namespaces.
 
-#### cloud-controller-manager
+### cloud-controller-manager
 
 A Kubernetes control plane component that embeds cloud-specific control logic. The cloud controller manager lets you link your cluster into your cloud provider's API, and separates out the components that interact with that cloud platform from components that only interact with your cluster.
 The cloud-controller-manager only runs controllers that are specific to your cloud provider. If you are running Kubernetes on your own premises, or in a learning environment inside your own PC, the cluster does not have a cloud controller manager.
@@ -97,7 +97,7 @@ The following controllers can have cloud provider dependencies:
 - Route controller: For setting up routes in the underlying cloud infrastructure
 - Service controller: For creating, updating and deleting cloud provider load balancers
 
-### Nodes
+## Nodes
 
 Kubernetes runs your workload by placing containers into Pods to run on Nodes. A node may be a virtual or physical machine, depending on the cluster. Each node is managed by the control plane and contains the services necessary to run Pods.
 
@@ -105,13 +105,13 @@ Typically you have several nodes in a cluster; in a learning or resource-limited
 
 The components on a node include the kubelet, a container runtime, and the kube-proxy.
 
-#### Kubelet
+### Kubelet
 
 The kubelet is the primary "node agent" that runs on each node. It can register the node with the apiserver using one of: the hostname; a flag to override the hostname; or specific logic for a cloud provider.
 
 The kubelet works in terms of a PodSpec. A PodSpec is a YAML or JSON object that describes a pod. The kubelet takes a set of PodSpecs that are provided through various mechanisms (primarily through the apiserver) and ensures that the containers described in those PodSpecs are running and healthy. The kubelet doesn't manage containers which were not created by Kubernetes.
 
-#### Kube-proxy
+### Kube-proxy
 
 kube-proxy is a network proxy that runs on each node in your cluster, implementing part of the Kubernetes Service concept.
 
@@ -127,7 +127,7 @@ Technologies:
 - userspace (Windows)
 - kernelspace (default in the future Windows)
 
-#### Container runtime
+### Container runtime
 
 The container runtime is the software that is responsible for running containers.
 
