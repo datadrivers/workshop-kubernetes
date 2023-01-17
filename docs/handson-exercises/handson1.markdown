@@ -5,7 +5,7 @@ parent: HandsOn exercises
 nav_order: 1
 ---
 
-# HandsOn exercises ""First Apply"
+# HandsOn exercises "First Apply"
 
 ## Goal
 
