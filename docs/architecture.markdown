@@ -24,7 +24,7 @@ CRI-O: Implementation of a Kubernetes CRI (Container Runtime Interface) to enabl
 
 ## Why should you use Kubernetes
 
-![container-evolution](static/container-evolution.png)
+![container-evolution](static/container-evolution.webp)
 
 - Containers bundle your application
 - You can easily run your application
