@@ -87,7 +87,7 @@ For non-unique user-provided attributes, Kubernetes provides labels and annotati
 
 Below are four types of commonly used name constraints for resources.
 
-#### DNS Subdomain Names
+#### **DNS Subdomain Names**
 
 Most resource types require a name that can be used as a DNS subdomain name as defined in RFC 1123. This means the name must:
 
@@ -96,7 +96,7 @@ Most resource types require a name that can be used as a DNS subdomain name as d
 - start with an alphanumeric character
 - end with an alphanumeric character
 
-#### RFC 1123 Label Names
+#### **RFC 1123 Label Names**
 
 Some resource types require their names to follow the DNS label standard as defined in RFC 1123. This means the name must:
 
@@ -105,7 +105,7 @@ Some resource types require their names to follow the DNS label standard as defi
 - start with an alphanumeric character
 - end with an alphanumeric character
 
-#### RFC 1035 Label Names
+#### **RFC 1035 Label Names**
 
 Some resource types require their names to follow the DNS label standard as defined in RFC 1035. This means the name must:
 
@@ -114,6 +114,6 @@ Some resource types require their names to follow the DNS label standard as defi
 - start with an alphabetic character
 - end with an alphanumeric character
 
-#### Path Segment Names
+#### **Path Segment Names**
 
 Some resource types require their names to be able to be safely encoded as a path segment. In other words, the name may not be "." or ".." and the name may not contain "/" or "%".
