@@ -14,7 +14,9 @@ We want to create a local KIND-Cluster
 ## Steps
 
 1. Start Cluster with Kind
+
    `kind create cluster`
+
 2. Create file `nginx.yaml` with following content
 
    ```yaml
@@ -40,11 +42,18 @@ We want to create a local KIND-Cluster
    ```
 
 3. Check kubectl configuration
+
    `kubectl version`
    `kubectl get nodes`
+
 4. Apply nginx
+
    `kubectl apply -f nginx.yaml`
+
 5. Check status
+
    `kubectl get deployments,pods`
+
 6. Read Logs of container
+
    `kubectl logs <pod-name>`
