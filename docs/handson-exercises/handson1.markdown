@@ -23,19 +23,19 @@ We want to create a local KIND-Cluster
    apiVersion: apps/v1
    kind: Deployment
    metadata:
-   name: nginx-deployment
+     name: nginx-deployment
    spec:
-   selector:
+     selector:
        matchLabels:
        app: nginx
-   replicas: 2 # tells deployment to run 2 pods matching the template
-   template:
+     replicas: 2 # tells deployment to run 2 pods matching the template
+     template:
        metadata:
-       labels:
+         labels:
            app: nginx
        spec:
-       containers:
-       - name: nginx
+         containers:
+         - name: nginx
            image: nginx:1.14.2
            ports:
            - containerPort: 80
