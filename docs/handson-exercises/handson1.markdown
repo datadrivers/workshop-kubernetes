@@ -14,6 +14,7 @@ We want to create a local KIND-Cluster
 ## Steps
 
 1. Create kind config kind.yaml with content
+
     ```yaml
     kind: Cluster
     apiVersion: kind.x-k8s.io/v1alpha4
@@ -63,7 +64,7 @@ We want to create a local KIND-Cluster
            image: nginx:1.14.2
            ports:
            - containerPort: 80
-   ```
+    ```
 
 3. Check kubectl configuration
 
