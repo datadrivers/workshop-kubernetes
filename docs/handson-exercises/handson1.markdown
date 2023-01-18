@@ -19,7 +19,7 @@ We want to create a local KIND-Cluster
     apiVersion: kind.x-k8s.io/v1alpha4
     nodes:
     - role: control-plane
-    extraPortMappings:
+      extraPortMappings:
       - containerPort: 30101
         hostPort: 30101
         listenAddress: "127.0.0.1"
