@@ -13,9 +13,33 @@ We want to create a local KIND-Cluster
 
 ## Steps
 
-1. Start Cluster with Kind
+1. Create kind config kind.yaml with content
+    ```yaml
+    kind: Cluster
+    apiVersion: kind.x-k8s.io/v1alpha4
+    nodes:
+    - role: control-plane
+    extraPortMappings:
+      - containerPort: 30101
+        hostPort: 30101
+        listenAddress: "127.0.0.1"
+      - containerPort: 30102
+        hostPort: 30102
+        listenAddress: "127.0.0.1"
+      - containerPort: 30103
+        hostPort: 30103
+        listenAddress: "127.0.0.1"
+      - containerPort: 30104
+        hostPort: 30104
+        listenAddress: "127.0.0.1"
+      - containerPort: 30105
+        hostPort: 30105
+        listenAddress: "127.0.0.1"
+    ```
 
-   `kind create cluster`
+2. Start Cluster with Kind
+
+   `kind create cluster --config kind.yaml`
 
 2. Create file `nginx.yaml` with following content
 
