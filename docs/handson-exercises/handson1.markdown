@@ -27,7 +27,7 @@ We want to create a local KIND-Cluster
    spec:
      selector:
        matchLabels:
-       app: nginx
+         app: nginx
      replicas: 2 # tells deployment to run 2 pods matching the template
      template:
        metadata:
