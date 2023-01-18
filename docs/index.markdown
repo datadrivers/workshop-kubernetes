@@ -64,5 +64,4 @@ Optional:
 - Docker <https://docs.docker.com/get-docker/>
 - Podman <https://podman.io/getting-started/installation>
 - kubectl and kind <https://kubernetes.io/docs/tasks/tools/>
-- kind <https://github.com/tfutils/tfenv#installation>
 - git <https://git-scm.com/book/en/v2/Getting-Started-Installing-Git>
