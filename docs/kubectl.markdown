@@ -55,4 +55,4 @@ link:
 ### Rollback
 
 - `kubectl rollout undo TYPE NAME`
-- `kubectl rollout undo TYPE NAME --revision=NUMBER`
+- `kubectl rollout undo TYPE NAME --to-revision=NUMBER`
