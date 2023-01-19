@@ -94,3 +94,10 @@ secretGenerator:
     labels:
       app.kubernetes.io/name: "app2"
 ```
+
+## Deployment command
+
+```bash
+kubectl apply -k ./
+kustomize build ./ | kubectl apply -f -
+```
