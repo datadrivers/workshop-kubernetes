@@ -59,6 +59,8 @@ File structure:
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
+namespace: default
+
 bases:
 - ../base/test
 
@@ -69,8 +71,6 @@ configMapGenerator:
 - name: app-whatever
   files:
   - myFileName.ini=whatever.ini
-
-configMapGenerator:
 - name: app-whatever
   files:
   - myFileName.ini=whatever.ini
